@@ -108,3 +108,23 @@ SQL>copy from scott/tiger@orcl create aaa using select * from emp
 ▷ ex: select first_name || ' ' || last_name "이 름" from employees;
 
 ▷ ex: select '나의 연락처는 '||email|| ' 이며 전화번호는 ' ||phone_number||'이다.' "연 락 처" from employees;
+
+## 4. TCL 관련
+
+### 4-1. 트랜잭션 개요
+데이터베이스의 논리적 연산단위, 하나 이상의 SQL 문장이 포함됨.
+
+* A원자성: all or nothing
+* C일관성: 이전이 정상이면 이후도 정상
+* I고립성: 다른 트랜잭션의 영향받으면 안됨
+* D지속성: 영구적 저장
+
+### 4-2. 트랜잭션 명령어
+* commit: 영구적으로 반영해라
+이전 상태: 변경된 행은 잠금 설정, 다른사용자 열람 불가
+이후 상태: 잠금 해제, 모든 사용자 열람 가능
+* rollback: 변경 전으로 복귀하라(`rollback to 저장점이름;`)
+* savepoint: 저장점 만들기(`savepoint 저장점이름;`)
+
+	
+	
