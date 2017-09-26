@@ -1,6 +1,6 @@
 # R언어 개요
 
-참조문서 : [An Introduction to R](https://r-forge.r-project.org/scm/viewvc.php/*checkout*/www/manual/R-intro-ko.html?revision=1252&root=ihelp&pathrev=1323)
+참조문서 : [An Introduction to R](https://homepage.usask.ca/~chl948/doc/manual/R-FAQ-ko.html)
 
 ## 1. R언어란?
 통계 계산과 그래픽을 위한 프로그래밍 언어이다. 뉴질랜드의 로버트 잰틀맨과 로스 이하카가 개발하였다. 1993년 처음으로 공개되었다. R은 GPL 하에 배포되는 S 프로그래밍 언어의 구현으로 GNU S라고도 한다.
@@ -23,8 +23,20 @@ R은 R코드를 메인메모리에 올려둔다. R해석기는 R코드를 기계
 
 인메모리에서 처리하기 때문에 빠르지만, 최대 데이터 크기는 사용가능한 RAM의 크기에 따라 달라진다.
 
-## 3. CRAN
-CRAN은 the Comprehensive R Archive Network의 약자이다. R은 사람들이 제작한 패키지를 추가하여 기능을 확장할 수 있다.
+## 3. 기본 명령어
+### 3-1. 도움말
+* 시작페이지 : `help.start()`R
+* `?? + 찾고자하는 문자열`
+* `help.search("찾고자하는 문자열")`
+
+### 3-2. 종료
+`q()`
+
+### 3-3. 명령 history
+`history()` 또는 ↑ 화살표를 이용한다.
+
+### 3-4. 배치실행
+R언어도 배치파일을 만들어 실행할 수 있다. `파일명.r` 로 R코드를 작성한 후 콘솔에서 `source("파일명.r")` 을 실행한다.
 
 ## 4. 좋은 성능의 R코드를 위하여
 * **벡터화** : R 연산자가 벡터를 인수로 취하여 여러 값을 신속하게 처리
