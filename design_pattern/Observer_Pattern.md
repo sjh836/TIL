@@ -1,4 +1,4 @@
-## Observer Pattern
+# Observer Pattern
 
 ## 1. 관찰자(Observer) 패턴이란?
 * 리액티브 프로그래밍의 기초이며, 대부분의 MVC, UI라이브러리들이 내부적으로 사용하는 디자인 패턴이다.
@@ -44,7 +44,12 @@ public interface Observer<T> {
 * 멀티스레드에서 동시성 등 챙겨야할 부분들이 많음 (많은 걸 직접 구현해야함)
 
 ## 5. 관찰자(Observer) 패턴 vs 발행구독(Pub/Sub) 패턴
+![옵저버와 발행구독](https://blog.kakaocdn.net/dn/dpQCZr/btqR1E5rUrf/kM6tK3dkoJuCrcp6gJ2Tr0/img.png)
+
 * 관찰자와 발행구독은 비슷하면서도 약간 다른 부분이 있다.
 * 발행구독 패턴은 Subject - Observer 사이에 간접적인 계층이 하나 더 있다.
 * 구독자는 발행자가 누군지는 모르지만, 이벤트채널(=메세지 브로커, 이벤트버스)은 알고 있는 셈
 * 토픽 기반 시스템
+
+## 6. 리액티브 관점에서 옵저버 패턴의 한계
+* Reactive Streams 포스팅 : https://sjh836.tistory.com/182
